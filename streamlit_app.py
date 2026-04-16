@@ -17,10 +17,10 @@ st.write("The name on your smoothie will be:", name_on_order)
 
 fruit_options = session.table("smoothies.public.fruit_options").select("FRUIT_NAME")
 
-ingredient_list = st.multiselect("Ingredients:", fruit_options)
+ingredients_list = st.multiselect("Ingredients:", fruit_options)
 
-if ingredient_list:
-    ingredient_string = " ".join(str(fr) for fr in ingredient_list)
+if ingredients_list:
+    ingredient_string = " ".join(str(fr) for fr in ingredients_list)
 
     for fruit_chosen in ingredients_list:
         ingredients_string += fruit_chosen + ' '
